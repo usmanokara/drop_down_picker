@@ -112,9 +112,9 @@ class DropdownDatePicker extends StatefulWidget {
         super(key: key);
 
   static bool _isValidInitialDate(Date date, Date firstDate, Date lastDate) {
-    var current = DateTime(date.year, date.month, date.day, 0, 0, 0);
+    var current = DateTime(date.year, date.month, date.day, 1, 1, 1);
     var start = DateTime(
-        firstDate.year, firstDate.month, firstDate.day, 1, 1, 1);
+        firstDate.year, firstDate.month, firstDate.day, 0, 0, 0);
     var end = DateTime(lastDate.year, lastDate.month, lastDate.day, 23, 59, 59);
     return current.isAfter(start) && current.isBefore(end);
 
